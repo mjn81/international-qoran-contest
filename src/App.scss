@@ -1,0 +1,32 @@
+:root {
+    --text-color: #c49f82;
+}
+
+
+@font-face {
+    font-family: 'Anjoman';
+    src: url(./assets/fonts/Anjoman/Anjoman-ExtraLight.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anjoman';
+    src: url(./assets/fonts/Anjoman/Anjoman-Black.ttf) format('truetype');
+    font-weight: 800;
+}
+
+* , *::after , *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Register Style */
+
+body {
+    font-family: 'Anjoman', sans-serif;
+    font-weight:400 ;
+    color: #000;
+    background: #fff;
+}
+
