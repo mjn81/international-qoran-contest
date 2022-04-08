@@ -7,14 +7,20 @@ import {
 
 import AuthLayout from './layouts/AuthLayout';
 
+
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
 import './App.scss';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="" element={<Navigate to="/auth" />} />
-        <Route path="/auth" element={<AuthLayout />}></Route>
+        <Route path="" element={<Navigate to="/auth/login" />} />
+        <Route path="/auth" element={<AuthLayout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Route>
       </Routes>
     </Router>
   );

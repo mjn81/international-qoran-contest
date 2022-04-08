@@ -1,13 +1,18 @@
+import { Outlet } from "react-router-dom"; 
+
 import { AuthContainer } from "@components/core";
 import Navigation from "@components/navigation/Navigation";
 
-const AppLayout = () => {
+
+
+
+const AuthLayout = () => {
     return (  
         <AuthContainer>
             <Navigation />
-
+            <Outlet />  
         </AuthContainer>
     );
 }
  
-export default AppLayout;
+export default AuthLayout;
