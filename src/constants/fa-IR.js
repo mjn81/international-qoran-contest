@@ -10,4 +10,7 @@ export default {
   'auth.phoneNumber': 'تلفن همراه',
   'auth.confirmPassword': 'تایید رمز عبور',
   'auth.rememberMe': 'مرا به خاطر بسپار',
+  'auth.firstName': 'نام',
+  'auth.lastName': 'نام خانوادگی',  
+  'quiz.title': 'سوال',
 };

@@ -1,6 +1,8 @@
 :root {
     --text-color: #c49f82;
+    --dark-text-color: #5f3b2a;
     --gray-color:#ebebed;
+    --back-gray-color: #e5e5e5;
     --font-root: 'Anjoman', sans-serif;
     --primary-gradient: linear-gradient(120deg, #381408 -46%, #c49f82 100%);
 }
@@ -8,14 +10,28 @@
 @font-face {
     font-family: 'Anjoman';
     src: url(./assets/fonts/Anjoman/Anjoman-ExtraLight.ttf) format('truetype');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Anjoman';
     src: url(./assets/fonts/Anjoman/Anjoman-Black.ttf) format('truetype');
-    font-weight: bold;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anjoman';
+    src: url(./assets/fonts/Anjoman/Anjoman-UltraBold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anjoman';
+    src: url(./assets/fonts/Anjoman/Anjoman-Heavy.ttf) format('truetype');
+    font-weight: 900;
     font-style: normal;
 }
 
@@ -23,14 +39,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 /* Register Style */
 
 body {
     font-family: 'Anjoman', sans-serif;
-    
     color: #000;
     background: #fff;
 }

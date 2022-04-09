@@ -6,10 +6,11 @@ import {
 } from 'react-router-dom';
 
 import AuthLayout from './layouts/AuthLayout';
+import UserLayout from './layouts/UserLayout';
 
-
-import Login from './pages/login/Login';
-import Register from './pages/register/Register';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Quiz from './pages/Quiz';
 import './App.scss';
 
 function App() {
@@ -20,6 +21,11 @@ function App() {
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+        </Route>
+        <Route path="/user" element={<UserLayout />}>
+          <Route path="quiz" element={<Quiz />} />
+
+
         </Route>
       </Routes>
     </Router>
