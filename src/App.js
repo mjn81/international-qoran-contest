@@ -25,7 +25,6 @@ function App() {
         <Route path="/user" element={<UserLayout />}>
           <Route path="quiz" element={<Quiz />} />
 
-
         </Route>
       </Routes>
     </Router>

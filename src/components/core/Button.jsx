@@ -35,7 +35,7 @@ export const Button = styled.button`
   display: block;
   width: 100%;
   height: 50px;
-  border-radius: 5px;
+  border-radius: ${props => props.radius || '5px'};
   background:var(--primary-gradient);
   font-family: var(--font-root);
   font-weight: 600;

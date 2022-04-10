@@ -27,6 +27,6 @@ export const REGISTER_NAMES = {
 };
 
 export const QUIZ_INITIAL = {
-  answer: ''
+  answer_id: ''
 }
 

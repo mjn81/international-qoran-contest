@@ -13,4 +13,5 @@ export default {
   'auth.firstName': 'نام',
   'auth.lastName': 'نام خانوادگی',  
   'quiz.title': 'سوال',
+  'quiz.submit': 'ثبت',
 };

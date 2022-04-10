@@ -1,6 +1,13 @@
 .answer {
-    cursor: pointer;
-    margin: 1rem auto;
+  cursor: pointer;
+  margin: 1rem 0;
+    max-width:fit-content;
+    display: flex;
+    align-items: center;
+    p {
     color: var(--dark-text-color);
+    text-align: right;
     font-weight: bolder;
+    margin-right: 0.5rem;
+  }
 }

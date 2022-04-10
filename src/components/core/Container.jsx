@@ -15,5 +15,7 @@ export const UserContainer = styled.div`
   text-align: center;
   .logo {
     width: 80%;
+    filter: invert(11%) sepia(15%) saturate(2858%) hue-rotate(334deg)
+      brightness(100%) contrast(101%);
   }
 `;
