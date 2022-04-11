@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Quiz from './pages/Quiz';
+import NotFound from './pages/404';
 import './App.scss';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="quiz" element={<Quiz />} />
 
         </Route>
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>
   );

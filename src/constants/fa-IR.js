@@ -15,5 +15,6 @@ export default {
   'quiz.title': 'سوال',
   'quiz.submit': 'ثبت',
   'home.title': 'اسامی برندگان مسابقه در جستجوی آرامش',
-  'home.description': 'بیست و نهمین نمایشگاه بین المللی قرآن کریم'
+  'home.description': 'بیست و نهمین نمایشگاه بین المللی قرآن کریم',
+  'error.notFound' : '404 صفحه یافت نشد',
 };

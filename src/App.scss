@@ -58,3 +58,11 @@ a {
 .form-wrapper{
     margin: 1.5rem auto;
 }
+
+svg {
+        position: absolute;
+        height:40px;
+        top:50%;
+        left:0;
+        transform: translateY(-50%);
+    }

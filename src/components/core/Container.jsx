@@ -5,12 +5,14 @@ export const AuthContainer = styled.div`
   text-align: center;
   height: 100%;
   margin: 1rem auto;
+  padding:1rem 0;
   color: var(--text-color);
 `;
 
 export const UserContainer = styled.div`
   width: 350px;
   margin: 1rem auto;
+  padding: 1rem 0;
   color: var(--text-color);
   text-align: center;
   .logo {

@@ -24,7 +24,7 @@
         align-items: center;
         flex-direction: column;
         width: 100%;
-        height: 750px;
+        height: 765px;
         background: url(../assets/images/bg-home.png) center center;
         background-size: cover;
 
@@ -35,7 +35,7 @@
             flex-direction: column;
             text-align: center;
             width: 100%;
-            height: 65%;
+            height: 55%;
             margin-top: 8rem;
             
             .date {
@@ -55,7 +55,7 @@
             img {
                 width: 150px;
                 filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(239deg) brightness(111%) contrast(101%);
-                margin: 1rem auto;
+                margin: 0 auto;
             }
         }
     }
