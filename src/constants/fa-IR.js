@@ -14,4 +14,6 @@ export default {
   'auth.lastName': 'نام خانوادگی',  
   'quiz.title': 'سوال',
   'quiz.submit': 'ثبت',
+  'home.title': 'اسامی برندگان مسابقه در جستجوی آرامش',
+  'home.description': 'بیست و نهمین نمایشگاه بین المللی قرآن کریم'
 };
