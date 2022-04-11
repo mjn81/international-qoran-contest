@@ -34,14 +34,15 @@ export const LoginForm = () => {
             placeholder={faIR['auth.phoneNumber']}
             as={Input}
           />
-          <TextLink to="/auth/forget-password" margin="1rem 0">
+          {/* <TextLink to="/auth/forget-password" margin="1rem 0">
             {faIR['auth.forgotPassword']}
-          </TextLink>
+          </TextLink> */}
           <CheckBox
             name={LOGIN_NAMES.isRemember}
             value={values.rememberMe}
             setValue={setFieldValue}
             text={faIR['auth.rememberMe']}
+            margin="1rem auto"
           />
           <Button type="submit" disabled={isSubmitting} margin='20px 0  0  0 '>
             {faIR['auth.login']}
@@ -103,7 +104,7 @@ export const RegisterForm = () => {
             margin='15px auto'
           />
           <Button type="submit" disabled={isSubmitting} margin='20px 0  0  0 '>
-            {faIR['auth.login']}
+            {faIR['auth.register']}
           </Button>
         </Form>
       )}

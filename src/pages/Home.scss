@@ -3,7 +3,6 @@
     height: 100vh;
     margin: auto;
     text-align: center;
-    background:url(../assets/images/pattern.png ) repeat-x top top cover;
     .title {
         width: 100%;
     }
@@ -25,8 +24,39 @@
         align-items: center;
         flex-direction: column;
         width: 100%;
-        height: 78%;
+        height: 750px;
         background: url(../assets/images/bg-home.png) center center;
         background-size: cover;
+
+        .data-container{
+            display: flex;
+            justify-content: center;
+            align-items: space-between;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            height: 65%;
+            margin-top: 8rem;
+            
+            .date {
+                margin:1.5rem 0 ;
+                font-size: 1.5rem;
+                color:#fff;
+            }
+            .rankings {
+                width: 100%;
+                margin: 1.5rem 0;
+                padding: 0 4.5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+    
+            img {
+                width: 150px;
+                filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(239deg) brightness(111%) contrast(101%);
+                margin: 1rem auto;
+            }
+        }
     }
 }
