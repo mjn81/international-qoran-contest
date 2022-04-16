@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"; 
+import { Outlet, useParams } from "react-router-dom"; 
 
 import { AuthContainer } from "@components/core";
 import Navigation from "@components/navigation/Navigation";

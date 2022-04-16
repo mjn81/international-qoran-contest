@@ -1,23 +1,28 @@
+import { useContext } from 'react';
+import { context } from '../../context/context';
 import { Formik, Field, Form } from 'formik';
 import { useNavigate } from 'react-router-dom';
-
+import { toast , ToastContainer} from 'react-toastify';
 import faIR from '@constants/fa-IR';
 import { LOGIN_INITIAL, LOGIN_NAMES , REGISTER_INITIAL , REGISTER_NAMES } from '@constants/values';
 import { Input, Button, CheckBox } from '@components/core';
+import { login , register } from '../../api';
 import './Forms.scss';
-
-export const LoginForm = () => {
+export const LoginForm = ({group}) => {
   const navigator = useNavigate();
+  const { dispatch } = useContext(context);
   return (
     <Formik
       initialValues={LOGIN_INITIAL}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
+        setSubmitting(true);
+        login(dispatch , values).then(() => {
+          navigator(`/user/quiz/${group}`);
+        }).catch(() => {
+          toast.error(faIR['error.login'], {position:'top-right'});
+        }).finally(() => {
           setSubmitting(false);
-        }, 400);
-
-        navigator('/user/quiz');
+        });
       }}
     >
       {({ values, setFieldValue, isSubmitting }) => (
@@ -66,38 +71,33 @@ export const LoginForm = () => {
               />
             </svg>
           </div>
-          {/* <TextLink to="/auth/forget-password" margin="1rem 0">
-            {faIR['auth.forgotPassword']}
-          </TextLink> */}
-          <CheckBox
-            name={LOGIN_NAMES.isRemember}
-            value={values.rememberMe}
-            setValue={setFieldValue}
-            text={faIR['auth.rememberMe']}
-            margin="1rem auto"
-          />
           <Button type="submit" disabled={isSubmitting} margin="20px 0  0  0 ">
             {faIR['auth.login']}
           </Button>
+        <ToastContainer />
         </Form>
       )}
     </Formik>
   );
 };
 
-export const RegisterForm = () => {
+export const RegisterForm = ({group}) => {
   const navigator = useNavigate();
   return (
     <Formik
       initialValues={REGISTER_INITIAL}
       onSubmit={(values, { setSubmitting }) => {
-        // authorization
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-
-        navigator('/user/quiz');
+        setSubmitting(true);
+        register(values)
+          .then(() => {
+            navigator(`/auth/login/${group}` , {replace: true});
+          })
+          .catch(() => {
+            toast.error(faIR['error.register']);
+          })
+          .finally(() => {
+            setSubmitting(false);
+          });
       }}
     >
       {({ values, setFieldValue, isSubmitting }) => (
@@ -130,6 +130,13 @@ export const RegisterForm = () => {
             placeholder={faIR['auth.lastName']}
             as={Input}
           />
+
+          <Field
+            name={REGISTER_NAMES.ncode}
+            type="text"
+            placeholder={faIR['auth.nationalCode']}
+            as={Input}
+          />
           <div className="icon-wrapper">
             <Field
               name={REGISTER_NAMES.phoneNumber}
@@ -152,23 +159,10 @@ export const RegisterForm = () => {
               />
             </svg>
           </div>
-
-          <Field
-            name={REGISTER_NAMES.ncode}
-            type="text"
-            placeholder={faIR['auth.nationalCode']}
-            as={Input}
-          />
-          <CheckBox
-            name={REGISTER_NAMES.isRemember}
-            value={values.rememberMe}
-            setValue={setFieldValue}
-            text={faIR['auth.rememberMe']}
-            margin="15px auto"
-          />
           <Button type="submit" disabled={isSubmitting} margin="20px 0  0  0 ">
             {faIR['auth.register']}
           </Button>
+          <ToastContainer />
         </Form>
       )}
     </Formik>

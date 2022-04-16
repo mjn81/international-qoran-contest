@@ -35,6 +35,12 @@
     font-weight: 900;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Titr';
+    src: url(./assets/fonts/Yekan/BTitrBold.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 * , *::after , *::before {
     margin: 0;

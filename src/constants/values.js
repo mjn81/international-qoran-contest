@@ -1,7 +1,6 @@
 export const LOGIN_INITIAL = {
   nationalCode: '',
   password: '',
-  rememberMe: false,
 };
 
 export const LOGIN_NAMES = {
@@ -15,7 +14,7 @@ export const REGISTER_INITIAL = {
   lastName: '',
   phoneNumber: '',
   nationalCode: '',
-  rememberMe: false,
+
 }
 
 export const REGISTER_NAMES = {

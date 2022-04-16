@@ -9,7 +9,7 @@ const AnswerItem = ({ answer, value , setValue , name }) => {
      
     <RadioButton checked={value === answer.id} />
    <p>
-    {answer.answer}
+    {answer.text}
     </p>
   </div>;
 };
